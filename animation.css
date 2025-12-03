@@ -1,7 +1,7 @@
 *{
     margin: 0;
-    padding: 0
-    ;
+    padding:0;
+   
 }
 
 header{
@@ -27,8 +27,177 @@ header ul {
 }
 .hcolor {
     color: rgb(176, 24, 24);
+    width: 0;
+    overflow: hidden;
+   white-space: nowrap;
+   border-right: 2px;
+   animation-name: typing;
+   animation-duration:1s;
+   animation-fill-mode: forwards;
 }
 
+
+
 header img {
-    animation-name: heart;
+    display: inline-block;   
+    animation-name: heartbeat; 
+    animation-duration: 1.2s;
+   animation-iteration-count: 2;
+
+}
+li{
+    list-style-type: none;
+    font-size: large;
+
+}
+
+.first-div {
+    display: flex;
+    position: relative;
+    background-color: beige;
+    background-image: url(https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100vw;
+    height: 70vh;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-delay: 2s;
+
+   
+}
+ 
+.info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 100px;
+
+
+}
+
+.info h3 {
+    font-size: xxx-large;
+    color: rgb(200, 46, 46);
+}
+.info p {
+    font-size: x-large;
+}
+
+
+.fixed-position div {
+    position: fixed;
+    bottom: 70px;
+    right: 0px;
+    width: 100px;
+    height: 60px;
+    /* margin:50px 50px 50px 0; */
+    
+    background-color: rgb(213, 15, 15);
+    border-radius: 10px;
+}
+.fixed-position div:hover {
+    animation-name: larger;
+    animation-duration: 5s;
+    color: white;
+}
+
+footer{
+    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 100px 80px 80px 80px;
+
+}
+footer h5 {
+  position: relative;
+  right: 20px;
+  margin-bottom: 25px;
+  font-size: large;
+  color: rgb(175, 32, 32);
+
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: large;
+
+}
+footer h5:hover {
+
+    animation-name: fontsize;
+    animation-duration: 2s;
+}
+
+  
+
+
+
+
+ 
+    
+@keyframes heartbeat {
+
+0% {
+    transform: scale(1.3);
+}
+15% {
+    transform: scale(1);
+}
+45% {
+    transform: scale(1.3);
+}
+75% {
+    transform: scale(1);
+}
+100% {
+    transform: scale(1.3);
+}
+
+
+
+}
+@keyframes color {
+    from{
+        background-color: beige;
+    }
+    to {
+        background-color: aqua;
+    }
+}
+
+@keyframes larger {
+    from{
+        width: 100px;
+    }
+    to {
+        width: 250px;    }
+}
+
+
+@keyframes fontsize {
+    from {
+        font-size: large;
+        color:rgb(175, 32, 32) ;
+    }
+    to {
+        font-size: x-large;
+        color: black;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 150px;
+    }
 }
